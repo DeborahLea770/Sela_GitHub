@@ -26,6 +26,15 @@ def password_check(passwd):
 # Main method
 def main():
     passwd = sys.argv[1]
+    parser = argparse.ArgumentParser()
+
+    if len(sys.argv) == 3:
+        parser.add_argument('-f', required=True)
+        args = parser.parse_args()
+        txt = args.f
+        f = open("." + txt, 'r')
+        passwd = f.readline()
+        f.close()
 
     if password_check(passwd) == 0:
         print(f"{Fore.GREEN}Password is valid")
