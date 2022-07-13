@@ -3,6 +3,15 @@ from colorama import Fore
 import argparse
 
 def password_check(passwd):
+    """
+     A program to validate password strength with the following requirements:
+     password strength with the following requirements:
+     Length – minimum of 10 characters.
+     Contain both alphabet and number.
+     Include both the small and capital case letters.
+     The output will be green if it passed the validation and red if it didn’t.
+     The program return exit code 0 if it passed the validation and exit code 1 if it didn’t.
+    """
     val = 0
 
     if len(passwd) < 10:
